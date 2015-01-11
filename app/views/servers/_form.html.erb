@@ -1,0 +1,29 @@
+<%= form_for(@server) do |f| %>
+  <% if @server.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@server.errors.count, "error") %> prohibited this server from being saved:</h2>
+
+      <ul>
+      <% @server.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :provider %><br>
+    <%= f.select :provider, options_for_select(['AWS']), {include_blank: true, default: nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :resource_type %><br>
+    <%= f.select :resource_type, options_for_select(['Hello World Server']), {include_blank: true, default: nil} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

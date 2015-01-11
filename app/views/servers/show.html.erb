@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @server.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @server.status %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @server.provider %>
+</p>
+
+<p>
+  <strong>Resource type:</strong>
+  <%= @server.resource_type %>
+</p>
+
+<p>
+  <strong>Provider identifier:</strong>
+  <%= @server.provider_identifier %>
+</p>
+
+<p>
+  <strong>Public ip:</strong>
+  <%= @server.public_ip %>
+</p>
+
+<p>
+  <strong>Private ip:</strong>
+  <%= @server.private_ip %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @server.summary %>
+</p>
+
+<%= link_to 'Back', servers_path %>

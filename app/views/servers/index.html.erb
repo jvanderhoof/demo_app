@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Servers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Resource Type</th>
+      <th>Status</th>
+      <th>Provider</th>
+      <th>Public IP</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servers.each do |server| %>
+      <tr>
+        <td><%= server.name %></td>
+        <td><%= server.resource_type %></td>
+        <td><%= server.status %></td>
+        <td><%= server.provider %></td>
+        <td><%= server.public_ip %></td>
+        <td><%= link_to 'Show', server %></td>
+        <td><%= link_to 'Destroy', server, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Server', new_server_path %>
