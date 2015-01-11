@@ -18,7 +18,7 @@ end
 end
 
 [
-  'thin -p 8080 -P tmp/pids/thin.pid -l logs/thin.log -d start',
+  'thin -p 8080 -P tmp/pids/thin.pid -l log/thin.log -d start',
   'bin/delayed_job start'
 ].each do |cmd|
   execute cmd do

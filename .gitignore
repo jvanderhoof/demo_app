@@ -9,6 +9,7 @@
 /.vagrant
 .env
 .DS_Store
+log/*
 
 # Ignore all logfiles and tempfiles.
 /log/*

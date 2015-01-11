@@ -5,8 +5,8 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-ENV['PRIVATE_KEY_PATH'] = '/home/deploy/.ssh/id_rsa'
-ENV['PUBLIC_KEY_PATH'] = '/home/deploy/.ssh/id_rsa.pub'
+ENV['PRIVATE_KEY_PATH'] = '/home/deploy/.ssh/id_dsa'
+ENV['PUBLIC_KEY_PATH'] = '/home/deploy/.ssh/id_dsa.pub'
 
 module BackcountryProject
   class Application < Rails::Application
