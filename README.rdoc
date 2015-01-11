@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple web app that creates and configures servers in AWS.  For it to work, you'll need first rename the .env.example file to .env.  Add AWS private and public keys.
 
-Things you may want to cover:
+To launch the application, you'll need to have Vagrant installed. Run `vagrant up`.  This will configure the server to run on port 3000 and start the Delayed Job queue.  It should be accessable at: http://10.10.10.10:8080.
 
-* Ruby version
+It's a very simple application, and in the interest of time, didn't spend much time on design. Clicking 'New Server' will let you create a new server.  You'll need to add a name and select
 
-* System dependencies
+The cookbook that sets up the server is located in berks-cookbooks/backcountry-project.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The interesting code for the app in the AwsServer class (located in lib/aws_server.rb) and the jobs (app/jobs folder).
