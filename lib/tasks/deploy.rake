@@ -5,7 +5,10 @@ namespace :deploy do
   end
 
   task :create => [:environment] do
-    LaunchServerJob.new.perform(1, ConfigureServerJob)
-    LaunchServerJob.perform_later(server.id, ConfigureServerJob)
+    server = Server.new(name: 'test 1', provider: 'AWS', resource_type: 'Hello World Server')
+    server.save
+    LaunchServerJob.new.perform(server.id, 'test')
+    #LaunchServerJob.new.perform(1, ConfigureServerJob)
+    #LaunchServerJob.perform_later(server.id, ConfigureServerJob)
   end
 end

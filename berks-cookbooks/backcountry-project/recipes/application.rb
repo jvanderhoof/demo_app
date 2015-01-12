@@ -1,9 +1,3 @@
-user_account 'deploy' do
-  ssh_keygen true
-end
-
-execute "chown vagrant:vagrant -R /home/deploy/.ssh"
-
 execute "bundle install" do
   cwd '/opt/app_code'
   user 'vagrant'
