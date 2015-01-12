@@ -2,9 +2,7 @@
 
 This is a simple web app that creates and configures servers in AWS.  For it to work, you'll need first rename the .env.example file to .env.
 
-```bash
   cp .env.example .env
-```
 
 Add your AWS private and public keys.
 
@@ -12,9 +10,7 @@ In the Vagrant file, you'll also need to link to the folder with the ssh keys as
 
 update:
 
-```ruby
-config.vm.synced_folder "/Users/jvanderhoof/.ssh/", "/opt/keys"
-```
+  config.vm.synced_folder "/Users/jvanderhoof/.ssh/", "/opt/keys"
 
 to you're ssh key directory.
 
