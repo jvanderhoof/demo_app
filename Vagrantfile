@@ -17,29 +17,30 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "./", "/opt/app_code"
   config.vm.synced_folder "/Users/jvanderhoof/.ssh/", "/opt/keys"
 
-  config.vm.hostname = 'backcountry-server-manager'
+  config.vm.hostname = 'sample-deployer-manager'
 
   config.omnibus.chef_version = 'latest'
 
   config.vm.network "private_network", ip: "10.10.10.10"
 
-  #config.berkshelf.berksfile_path = "./cookbook/Berksfile"
-  #config.berkshelf.enabled = true
+  config.berkshelf.berksfile_path = "./cookbook/Berksfile"
+  config.berkshelf.enabled = true
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
   end
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ['berks-cookbooks']
+    #chef.cookbooks_path = ['berks-cookbooks']
+    #chef.cookbooks_path = ['cookbook']
     chef.json = {
-      'backcountry-project' => {
+      'sample-deployer' => {
         'required_app_memory' => '150'
       }
     }
 
     chef.run_list = [
-      'recipe[backcountry-project::default]'
+      'recipe[sample-deployer::default]'
     ]
 
   end

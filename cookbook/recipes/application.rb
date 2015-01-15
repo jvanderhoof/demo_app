@@ -5,7 +5,7 @@ end
 
 ['db:create', 'db:migrate'].each do |cmd|
   execute "bundle exec rake #{cmd}" do
-    environment 'RAILS_ENV' => node['backcountry-project']['rails_environment']
+    environment 'RAILS_ENV' => node['sample-deployer']['rails_environment']
     cwd '/opt/app_code'
     user 'vagrant'
   end
@@ -16,7 +16,7 @@ end
   'bin/delayed_job start'
 ].each do |cmd|
   execute cmd do
-    environment 'RAILS_ENV' => node['backcountry-project']['rails_environment']
+    environment 'RAILS_ENV' => node['sample-deployer']['rails_environment']
     cwd '/opt/app_code'
     user 'vagrant'
   end

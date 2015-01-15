@@ -1,9 +1,9 @@
-name             'backcountry-project'
+name             'sample-deployer'
 maintainer       'Jason Vanderhoof'
 maintainer_email 'jvanderhoof@gmail.com'
 license          'All rights reserved'
-description      'Installs/Configures backcountry-project'
-long_description 'Installs/Configures backcountry-project'
+description      'Installs/Configures sample-deployer'
+long_description 'Installs/Configures sample-deployer'
 version          '0.1.0'
 
 depends 'apt'
@@ -16,13 +16,7 @@ depends 'user'
 end
 
 
-attribute 'backcountry-project/required_app_memory',
-  :display_name => 'Required Application Memory',
-  :type => 'string',
-  :required => 'optional',
-  :default => '150'
-
-attribute 'backcountry-project/rails_environment',
+attribute 'sample-deployer/rails_environment',
   :display_name => 'Environment',
   :type => 'string',
   :required => 'optional',

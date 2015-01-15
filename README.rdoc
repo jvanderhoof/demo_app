@@ -26,6 +26,6 @@ To launch the application, you'll need to have Vagrant installed. Run `vagrant u
 
 It's a very simple application, and in the interest of time, didn't spend much time on design. Clicking 'New Server' will let you create a new server.  You'll need to add a name and select a Provider (only AWS), and a Resource Type (only Hello World Server).  Once a server is created, you can see the status by updating the Server List page.
 
-The cookbook that sets up the server is located in berks-cookbooks/backcountry-project.
+The cookbook that sets up the server is located in berks-cookbooks/sample-deployer.
 
 The interesting code for the app in the AwsServer class (located in lib/aws_server.rb) and the jobs (app/jobs folder).

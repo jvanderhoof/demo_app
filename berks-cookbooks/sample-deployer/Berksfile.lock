@@ -1,5 +1,5 @@
 DEPENDENCIES
-  backcountry-project
+  sample-deployer
     path: .
     metadata: true
 
@@ -8,18 +8,18 @@ GRAPH
     iptables (>= 0.0.0)
     logrotate (>= 0.0.0)
   apt (2.6.1)
-  backcountry-project (0.1.0)
-    apache2 (~> 3.0.0)
-    apt (>= 0.0.0)
-    mysql (~> 6.0)
-    user (>= 0.0.0)
   iptables (0.14.1)
   logrotate (1.7.0)
-  mysql (6.0.6)
+  mysql (6.0.7)
     smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
   rbac (1.0.2)
   resource-control (0.1.1)
+  sample-deployer (0.1.0)
+    apache2 (~> 3.0.0)
+    apt (>= 0.0.0)
+    mysql (~> 6.0)
+    user (>= 0.0.0)
   smf (2.2.1)
     rbac (>= 1.0.1)
     resource-control (>= 0.0.0)

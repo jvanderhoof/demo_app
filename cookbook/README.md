@@ -1,4 +1,4 @@
-# backcountry-project-cookbook
+# sample-deployer-cookbook
 
 TODO: Enter the cookbook description here.
 
@@ -16,7 +16,7 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['backcountry-project']['bacon']</tt></td>
+    <td><tt>['sample-deployer']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -25,14 +25,14 @@ TODO: List your supported platforms.
 
 ## Usage
 
-### backcountry-project::default
+### sample-deployer::default
 
-Include `backcountry-project` in your node's `run_list`:
+Include `sample-deployer` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[backcountry-project::default]"
+    "recipe[sample-deployer::default]"
   ]
 }
 ```
