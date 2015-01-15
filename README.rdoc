@@ -1,6 +1,6 @@
 == README
 
-This project contains my solution to the following problem, a question I was asked to complete as part of a technical project.
+This project contains my solution to a question I was asked to complete as part of a technical interview project.
 
 === The Question
 
