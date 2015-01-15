@@ -1,9 +1,13 @@
 == README
-This is a sample project I was asked as to write as part of an interview project.   This is the question:
+
+This project contains my solution to the following problem, a question I was asked to complete as part of a technical project.
+
+=== The Question
 
 Write a utility that hosts a an app that configures and hosts a webpage that says Hello xxxxxxxxxxxx.com  and runs all hands off, include dependencies needed to operate app.. (open ended) chose language of choice…
 
 
+=== My Solution
 This is a simple web app that creates and configures servers in AWS.  For it to work, you'll need first rename the .env.example file to .env.
 
   cp .env.example .env
